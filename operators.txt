@@ -1,0 +1,13 @@
+int time = 1;
+	for (int i = 0; i < 100; i++)
+	{
+		std::cout << time;
+		time++; // increment
+		time += 1; //  increment
+		time = time + 1; // increment
+	}
+  
+  time++ assings then extends.
+  ++time will extend then assign.
+  
+  time += 1; is basically time + time = 1; (hint the + before '='.
