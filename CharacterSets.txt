@@ -1,1 +1,44 @@
+1 byte = 8 bits    /*  00000000  *\
+assign hexs by adding 0x before the address.
+Windows is mained Unicode.
+Annoying character sets were caused by regional issues with the french.
 
+
+SOURCE: https://www.techtarget.com/searchnetworking/definition/big-endian-and-little-endian
+
+A big-endian system stores the most significant byte of a word at the smallest memory address and the least significant byte at the largest. A little-endian system, in contrast, stores the least-significant byte at the smallest address.
+
+What are big-endian and little-endian?
+Endianness is a term that describes the order in which a sequence of bytes is stored in computer memory. Endianness can be either big or small, with the adjectives referring to which value is stored first.
+
+Big-endian is an order in which the "big end" (most significant value in the sequence) is stored first, at the lowest storage address. Little-endian is an order in which the "little end" (least significant value in the sequence) is stored first.
+
+The case for big-endian
+In a big-endian computer, the two bytes required for the hexadecimal number 4F52 would be stored as 4F52 in storage. For example, if 4F is stored at storage address 1000, 52 will be at address 1001. In a little-endian system, it would be stored as 524F, with 52 at address 1000 and 4F at 1001.
+
+For people who use languages that read left-to-right, big-endian seems like the natural way to think of storing a string of characters or numbers -- in the same order you expect to see it presented to you. In this way, many people consider big-endian as storing something in forward fashion, just as they read.
+
+The case for little-endian
+An argument for little-endian order is that as you increase a numeric value, you may need to add digits to the left. For example, a higher non-exponential number has more digits. Thus, an addition of two numbers often requires moving all the digits of a big-endian ordered number in storage. This addition moves everything to the right.
+
+In a number stored in little-endian fashion, the least significant bytes can stay where they are. New digits are added to the right at a higher address. This means some computer operations may be simpler and faster to perform.
+
+Uses of big-endian and little-endian
+Both big-endian and little-endian are widely used in digital electronics. The CPU typically determines the endianness in use.
+
+IBM's 370 mainframes, most reduced instruction set computers (RISC)-based computers and Motorola microprocessors use the big-endian approach. Transmission Control Protocol/Internet Protocol (TCP/IP) also uses the big-endian approach. For this reason, big-endian is sometimes called network order.
+
+On the other hand, Intel processors, DEC Alphas and at least some programs that run on them are little-endian.
+
+There are also mixed forms of endianness. For example, VAX floating point uses mixed-endian, also referred to as middle-endian. The ordering of bytes in a 16-bit word differs from the ordering of 16-bit words within a 32-bit word. Bi-endian processors can operate in either little-endian or big-endian mode, and switch between the two.
+
+Language compilers, such as Java or FORTRAN, have to know which way the object code they develop is going to be stored. Converters can be used to change one kind of endian to the other when necessary.
+
+History of endianness
+In 1980, computer scientist Danny Cohen applied the terms big-endian and little-endian to digital electronics in his article "On Holy Wars and a Plea for Peace."
+
+Big-endian and little-endian derive from Jonathan Swift's Gulliver's Travels, in which the Big Endians were a political faction that broke their eggs at the large end, or "the primitive way." They rebelled against the Lilliputian King, who required his subjects, the Little Endians, to break their eggs at the small end.
+
+While many mainframe computers are big-endian, most modern computers are little-endian.
+
+Endianness is initially an arbitrary decision by the semiconductor vendor that can have a long-term effect on a line of products. When vendors update their technology, they keep the existing endianness to help maintain backward compatibility. For example, the designers of the Motorola 68000 and the Intel 8086 (predecessor of the x86 family) chose their endianness in the 1970s and continue to use their respective endianness today.
